@@ -2,7 +2,14 @@ import styled from "styled-components";
 const Login = (props) => {
     return (
         <Container>
-            <Content><BgImage /></Content>
+            <Content>
+                <CTA>
+                    <Logo src="/images/logo.svg" alt="" />
+                </CTA>
+                <SignUp>GET IT ALL THERE</SignUp>
+                <Description>Get Premier access to Latest movies for an additional fee with a Disney+ subscription</Description>
+                <BgImage />
+            </Content>
         </Container>
     );
 
@@ -14,7 +21,7 @@ display:flex;
 flex-direction:column;
 text-align:center;
 height:100vk;
-`
+`;
 const Content = styled.div`
 margin-bottom:10vw;
 width:100%;
@@ -27,12 +34,12 @@ align-items:center;
 flex-direction:column;
 padding:80px 40px;
 height:100%;
-`
+`;
 
 const BgImage = styled.div`
-height:100%;
+height:100vh;
 background-size:cover;
-background-image: url('/images/disney-1359226_1920.jpg');
+background-image: url('/images/lo.jpg');
 z-index:-1;
 background-position:top;
 background-repeat:no-repeat;
@@ -40,6 +47,46 @@ position:absolute;
 top:0;
 right:0;
 left:0;
-
 `
+const CTA = styled.div`
+margin-bottom:2vw;
+max-width:650px;
+flex-wrap:wrap;
+display:flex;
+flex-direction:column;
+justify-content:center;
+margin-top:0;
+align-items:center;
+text-align:center;
+margin-right:auto;
+margin-left:auto;
+transition-timing-function:ease-out;
+transition:opacity 0.2s;`
+
+const Logo = styled.img`
+height:250px;
+width:300px;`
+
+const SignUp = styled.a`
+font-weight:bold;
+font-size:30px;
+padding:15px;
+width:50%;
+color:white;
+background-color:#1261a0;
+border:1 px solid transparent;
+border-radius:4px;
+letter-spacing:1.5px;
+&:hover{
+background-color:#0483ee;
+}
+`
+const Description = styled.p`
+color:hsla(0,0%,95.3%,1);
+font-size:20px;
+padding-top:10px;
+margin:0 0  24px;
+line-height:1.5rem;
+`
+
 export default Login
